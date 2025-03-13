@@ -92,25 +92,49 @@ const ActionPlanTracker = () => {
 
                     </div>
                 </div>
-                <div className=" h-[408px] border border-[#E4E4E4] rounded-[12px]">
-                    <table className="w-full  border-collapse border border-[#E4E4E4] rounded-xl">
-                        <thead className="h-[42px] justify-center rounded-xl items-center">
-                            <tr className="bg-[#F6F6F6] rounded-xl font-inter font-normal text-[12px] text-[#212121] leading-[150%] tracking-[-0.5%]">
-                                <th className="p-[12px] flex h-[42px] gap-[8px] items-center"><label>Question</label> <ExpandIcon size={18} style={{ color: "#84838A" }} /></th>
+                <div className="h-[408px] border border-[#E4E4E4] rounded-[12px] overflow-hidden">
+                    <table className="w-full border-collapse border border-[#E4E4E4] text-[12px] text-[#212121]">
+                        {/* Header */}
+                        <thead className="h-[42px] bg-[#F6F6F6] font-inter font-normal leading-[150%] tracking-[-0.5%]">
+                            <tr>
+                                <th className="p-[12px] flex items-center gap-[8px] text-left border border-[#E4E4E4]">
+                                    <label>Question</label>
+                                    <ExpandIcon size={18} className="text-[#84838A]" />
+
+                                </th>
                                 {[...Array(6)].map((_, i) => (
-                                    <th key={i} className="justify-center item-center p-[12px]"><label className="flex gap-[8px]">Cycle {i + 1} - 2024 <ExpandIcon size={16} style={{ color: "#84838A" }} /></label></th>
+                                    <th key={i} className="p-[12px] text-center border border-[#E4E4E4]">
+                                        <div className="flex justify-center items-center gap-[8px]">
+                                            Cycle {i + 1} - 2024
+                                            <ExpandIcon size={16} className="text-[#84838A]" />
+                                        </div>
+                                    </th>
                                 ))}
                             </tr>
                         </thead>
+
+                        {/* Body */}
                         <tbody>
                             {data.map((row, index) => (
-                                <tr key={index} className="border-t hover:bg-gray-100 transition">
-                                    <td className="font-inter font-medium text-[14px] flex leading-[18px] p-[5px] tracking-[-0.5px] text-[#212121]"><ExpandIcon color="red" size={16} />{row.question}</td>
+                                <tr key={index} className=" hover:bg-gray-100 transition">
+                                    {/* Question Cell */}
+                                    <td className="min-h-[66px] flex items-center gap-[8px] font-medium text-[14px] leading-[18px] tracking-[-0.5px] border-b border-[#E4E4E4]">
+                                        <ExpandIcon color="red" size={16} /> {row.question}
+                                    </td>
+
+                                    {/* Status Cells */}
                                     {row.cycle.map((status, i) => (
-                                        <td key={i} className="p-3 justify-center item-center">
-                                            {status ? <CircleCheck color="green" className="h-[24px] w-[24px]" size={24} /> : <CiCircleRemove color="red " size={24} />}
+                                        <td key={i} className={`h-[66px] border border-[#E4E4E4] text-center ${i !== 0 ? 'border-l-0' : ''}`}>
+                                            <div className="inline-flex justify-center items-center w-full">
+                                                {status ? (
+                                                    <CircleCheck color="green" size={24} />
+                                                ) : (
+                                                    <CiCircleRemove color="red" size={24} />
+                                                )}
+                                            </div>
                                         </td>
                                     ))}
+
                                 </tr>
                             ))}
                         </tbody>
