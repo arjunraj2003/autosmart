@@ -97,13 +97,13 @@ const ActionPlanTracker = () => {
                         {/* Header */}
                         <thead className="h-[42px] bg-[#F6F6F6] font-inter font-normal leading-[150%] tracking-[-0.5%]">
                             <tr>
-                                <th className="p-[12px] flex items-center gap-[8px] text-left border border-[#E4E4E4]">
+                                <th className="p-[12px] flex items-center gap-[8px] text-left border-y border-[#E4E4E4]">
                                     <label>Question</label>
                                     <ExpandIcon size={18} className="text-[#84838A]" />
 
                                 </th>
                                 {[...Array(6)].map((_, i) => (
-                                    <th key={i} className="p-[12px] text-center border border-[#E4E4E4]">
+                                    <th key={i} className="p-[12px] text-center border-y border-[#E4E4E4]">
                                         <div className="flex justify-center items-center gap-[8px]">
                                             Cycle {i + 1} - 2024
                                             <ExpandIcon size={16} className="text-[#84838A]" />
@@ -124,7 +124,7 @@ const ActionPlanTracker = () => {
 
                                     {/* Status Cells */}
                                     {row.cycle.map((status, i) => (
-                                        <td key={i} className={`h-[66px] border border-[#E4E4E4] text-center ${i !== 0 ? 'border-l-0' : ''}`}>
+                                        <td key={i} className={`h-[66px] border-y border-[#E4E4E4] text-center ${i !== 0 ? 'border-l-0' : ''}`}>
                                             <div className="inline-flex justify-center items-center w-full">
                                                 {status ? (
                                                     <CircleCheck color="green" size={24} />
