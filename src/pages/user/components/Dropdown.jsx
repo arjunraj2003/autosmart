@@ -6,7 +6,6 @@ const Dropdown = ({ label, options, selected, setSelected }) => {
 
     return (
         <div className="relative w-[292px]">
-            {/* Dropdown Button */}
             <button
                 onClick={() => setIsOpen(!isOpen)}
                 className="w-full h-full flex justify-between items-center px-4 py-2 bg-white border border-[#E4E4E4] rounded-lg shadow-sm hover:border-[#E14026] focus:outline-none"
@@ -23,7 +22,6 @@ const Dropdown = ({ label, options, selected, setSelected }) => {
                     color="#E14026" />}
             </button>
 
-            {/* Dropdown Menu */}
             {isOpen && (
                 <div className="absolute mt-2 w-full bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden z-10">
                     {options.map((option, index) => (
