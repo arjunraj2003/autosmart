@@ -13,12 +13,12 @@ const Dropdown = ({ label, options, selected, setSelected }) => {
                 <span>{selected || label}</span>
                 {isOpen ? <Up
                     size={18}
-                    className="w-[20px] h-[20px]"
+                    
                     color="#E14026"
                 />
                     : <Down 
                     size={18}
-                    className="w-[20px] h-[20px] "
+                    
                     color="#E14026" />}
             </button>
 

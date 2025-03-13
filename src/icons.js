@@ -13,6 +13,10 @@ import { CiSearch } from "react-icons/ci";
 import { FaChevronDown } from "react-icons/fa";
 import { FaChevronUp } from "react-icons/fa";
 import { MdOutlineWifi } from "react-icons/md";
+import { MdCheck } from "react-icons/md";
+import { HiXMark } from "react-icons/hi2";
+
+
 export {
     RiExpandUpDownLine as ExpandIcon,
     FaCheckCircle as CheckIcon,
@@ -27,4 +31,6 @@ export {
     FaChevronDown as Down,
     FaChevronUp as Up,
     MdOutlineWifi as WifiIcon,
+    MdCheck as Check,
+    HiXMark as CancelIcon,
 }
