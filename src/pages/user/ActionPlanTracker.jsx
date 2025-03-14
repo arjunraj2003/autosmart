@@ -106,7 +106,6 @@ const ActionPlanTracker = () => {
                 </div>
                 <div className="border border-[#E4E4E4] rounded-[12px] h-[410px] overflow-hidden">
                     <table className="w-full h-full border-collapse border border-[#E4E4E4] text-[13px] text-[#212121]">
-                        {/* Header */}
                         <thead className="h-[36px] bg-[#F6F6F6] font-inter font-normal leading-[150%] tracking-[-0.5%]">
                             <tr>
                                 <th className="p-[10px] text-left border-y border-[#E4E4E4]">
@@ -117,78 +116,67 @@ const ActionPlanTracker = () => {
                                 </th>
                                 {[...Array(6)].map((_, i) => (
                                     <th key={i} className="p-[10px] text-center border-y border-[#E4E4E4]">
-                                        <div className="flex justify-center items-center min-w-fit  gap-[5px]">
+                                        <div className="flex justify-center items-center min-w-fit gap-[5px]">
                                             <label className="text-[12px]">Cycle {i + 1} - 2024</label>
-                                            
                                             <ExpandIcon size={16} className="text-[#84838A]" />
                                         </div>
                                     </th>
                                 ))}
                             </tr>
                         </thead>
-
-                        {/* Body */}
                         <tbody>
-                            {data.map((row, index) => (
-                                <React.Fragment key={index}>
-                                    {/* Parent Question Row */}
-                                    <tr className="hover:bg-gray-100 transition">
-                                        <td className="p-[10px] border-b border-[#E4E4E4]">
-                                            <div className="flex min-w-[600px] items-center gap-[6px]">
-                                                <ExpandIcon
-                                                    color="red"
-                                                    className="border border-red-200 rounded-[4px] bg-[#FCECEA]"
-                                                    size={16}
-                                                />
-                                                <div className="flex flex-col">
-                                                    <span className="font-medium text-[13px] leading-[16px] tracking-[-0.5px]">
-                                                        {row.question}
-                                                    </span>
-                                                    <span className="text-gray-500 text-[12px]">{row.code}</span>
-                                                </div>
-                                            </div>
-                                        </td>
-
-                                        {/* Status Cells */}
-                                        {row.cycle.map((status, i) => (
-                                            <td
-                                                key={i}
-                                                 className="h-[50px] border-b  border-[#E4E4E4] text-center"
-                                                
-                                            >
-                                                <div className="flex justify-center">
-                                                    {status ? (
-                                                        <CircleCheck color="green" size={20} />
-                                                    ) : (
-                                                        <CiCircleRemove color="red" size={20} />
-                                                    )}
+                            {data.map((row, index) => {
+                                const isLastRow = index === data.length - 1;
+                                return (
+                                    <React.Fragment key={index}>
+                                        <tr
+                                            className={`hover:bg-gray-100 transition ${isLastRow ? "border-t border-b border-[#E4E4E4]" : "border-b border-[#E4E4E4]"
+                                                }`}
+                                        >
+                                            <td className="p-[10px]">
+                                                <div className="flex min-w-[600px] items-center gap-[6px]">
+                                                    <ExpandIcon
+                                                        color="red"
+                                                        className="border border-red-200 rounded-[4px] bg-[#FCECEA]"
+                                                        size={16}
+                                                    />
+                                                    <div className="flex flex-col">
+                                                        <span className="font-medium text-[13px] leading-[16px] tracking-[-0.5px]">
+                                                            {row.question}
+                                                        </span>
+                                                        <span className="text-gray-500 text-[12px]">{row.code}</span>
+                                                    </div>
                                                 </div>
                                             </td>
-                                        ))}
-                                    </tr>
-
-                                    {/* Expanded Sub-rows without Borders */}
-                                    {row.subquestions.map((subQ, subIndex) => (
-                                        <tr key={`${index}-${subIndex}`} className="bg-gray-50">
-                                            <td className="p-[10px] pl-[30px] text-gray-700">{subQ.text}</td>
-                                            {subQ.statuses.map((status, i) => (
-                                                <td key={i} className="p-[10px] text-center">
+                                            {row.cycle.map((status, i) => (
+                                                <td key={i} className="h-[50px] text-center">
                                                     <div className="flex justify-center">
-                                                        {status ? (
-                                                            <Check color="green" size={20} />
-                                                        ) : (
-                                                            <CancelIcon color="red" size={20} />
-                                                        )}
+                                                        {status ? <CircleCheck color="green" size={20} /> : <CiCircleRemove color="red" size={20} />}
                                                     </div>
                                                 </td>
                                             ))}
                                         </tr>
-                                    ))}
-                                </React.Fragment>
-                            ))}
+                                        {row.subquestions.map((subQ, subIndex) => (
+                                            <tr key={`${index}-${subIndex}`} className="bg-gray-50">
+                                                <td className="p-[10px] pl-[30px] text-gray-700">{subQ.text}</td>
+                                                {subQ.statuses.map((status, i) => (
+                                                    <td key={i} className="p-[10px] text-center">
+                                                        <div className="flex justify-center">
+                                                            {status ? <Check color="green" size={20} /> : <CancelIcon color="red" size={20} />}
+                                                        </div>
+                                                    </td>
+                                                ))}
+                                            </tr>
+                                        ))}
+                                    </React.Fragment>
+                                );
+                            })}
                         </tbody>
                     </table>
                 </div>
+
+
+
 
 
                 <div className="flex h-[40px] rounded-lg justify-between">
