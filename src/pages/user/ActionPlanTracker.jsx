@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Dropdown from "./components/Dropdown";
-
+import { Calendar, Wifi } from "lucide-react";
 import { Back, BackIcon2, DownIcon, ExpandIcon, NextIcon, NextIcon2, CircleCheck, SearchIcon, WifiIcon, CiCircleRemove, Check, CancelIcon } from "../../icons";
 import DropDownMain from "./components/DropDownMain";
 import DropDownR from "./components/DropDownR";
@@ -45,7 +45,7 @@ const ActionPlanTracker = () => {
         <div className=" h-[764px] flex flex-col p-[16px_24px] gap-4 border border-gray-300 rounded-lg bg-[#FCFCFC]">
             <div className=" flex h-[68px] flex gap-[12px] border border-[#E4E4E4] rounded-[12px] p-[12px] bg-white">
                 <div className="flex items-center justify-center gap-[10px] w-[44px] rounded-lg border border-gray-300 bg-[#FFCCC5]">
-                    <WifiIcon color="red" size={24} />
+                    <WifiIcon size={24} color="#E14026"/>
                 </div>
                 <div className="h-[44px] justify-center  flex flex-col gap-[4px]">
                     <p className="h-[24px] justify-center font-inter font-medium text-[18px] leading-[24px] tracking-[-0.005em]">
