@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Dropdown from "./components/Dropdown";
-import { Calendar, Wifi } from "lucide-react";
 import { Back, BackIcon2, DownIcon, ExpandIcon, NextIcon, NextIcon2, CircleCheck, SearchIcon, WifiIcon, CiCircleRemove, Check, CancelIcon } from "../../icons";
 import DropDownMain from "./components/DropDownMain";
 import DropDownR from "./components/DropDownR";
+import WifiSquare from "../../assets/wifi-square.png"
 
 
 const ActionPlanTracker = () => {
@@ -43,12 +43,12 @@ const ActionPlanTracker = () => {
 
     return (
         <div className=" h-[764px] flex flex-col p-[16px_24px] gap-4 border border-gray-300 rounded-lg bg-[#FCFCFC]">
-            <div className=" flex h-[68px] flex gap-[12px] border border-[#E4E4E4] rounded-[12px] p-[12px] bg-white">
+            <div className=" flex h-[68px] flex gap-[12px] border border-[#E4E4E4] rounded-[12px] p-[12px] bg-[#FFFFFF] shadow-[0px_10px_16px_0px_#0000000A]">
                 <div className="flex items-center justify-center gap-[10px] w-[44px] rounded-lg border border-gray-300 bg-[#FFCCC5]">
-                    <WifiIcon size={24} color="#E14026"/>
+                    <img src={WifiSquare} className="w-[19.9px] h-[20px]" alt="" />
                 </div>
                 <div className="h-[44px] justify-center  flex flex-col gap-[4px]">
-                    <p className="h-[24px] justify-center font-inter font-medium text-[18px] leading-[24px] tracking-[-0.005em]">
+                    <p className="h-[24px] justify-center font-inter font-medium text-[18px] leading-[24px] text-[#212121] tracking-[-0.005em]">
                         Action Plan Tracker
                     </p>
                     <p className="h-[16px] font-inter font-normal text-[12px] leading-[16px] tracking-[0em]  flex text-[#84838A] items-center">
@@ -74,49 +74,49 @@ const ActionPlanTracker = () => {
                                 label={selectedProgram}
                                 options={["Program A", "program B"]}
                                 setSelected={setSelectedProgram}
-                                className="w-[140px] h-[40px] flex justify-between items-center border border-[#F1F1F1] rounded-[8px] p-[8px_8px_8px_10px]"
+                                className="w-[140px] h-[40px] text-[12px] flex justify-between items-center bg-[#FFFFFF] border border-[#F1F1F1] rounded-[8px] p-[8px_8px_8px_10px]"
                             />
                             <Dropdown
                                 label={selectedLocation}
                                 options={["Location 1", "Location 2"]}
                                 setSelected={setSelectedLocation}
-                                className="w-[140px] h-[40px] flex justify-between items-center border border-[#F1F1F1] rounded-[8px] p-[8px_8px_8px_10px]"
+                                className="w-[140px] h-[40px] text-[12px] flex justify-between items-center bg-[#FFFFFF] border border-[#F1F1F1] rounded-[8px] p-[8px_8px_8px_10px]"
                             />
                             <Dropdown
                                 label={selectedDepartment}
                                 options={["Category 1", "Category 2"]}
                                 setSelected={setSelectedDepartment}
-                                className="w-[140px] h-[40px] flex justify-between items-center border border-[#F1F1F1] rounded-[8px] p-[8px_8px_8px_10px]"
+                                className="w-[140px] h-[40px] text-[12px] flex justify-between items-center bg-[#FFFFFF] border border-[#F1F1F1] rounded-[8px] p-[8px_8px_8px_10px]"
                             />
                             <Dropdown
                                 label={selectedSection}
                                 options={["Section X", "Section Y"]}
                                 setSelected={setSelectedSection}
-                                className="w-[140px] h-[40px] flex justify-between items-center border border-[#F1F1F1] rounded-[8px] p-[8px_8px_8px_10px]"
+                                className="w-[140px] h-[40px] text-[12px] flex justify-between items-center bg-[#FFFFFF] border border-[#F1F1F1] rounded-[8px] p-[8px_8px_8px_10px]"
                             />
                         </div>
                         <div className="flex-1  flex justify-end">
                             <div className="w-[140px] h-[40px] flex gap-[8px] border border-[#F1F1F1] rounded-[8px] p-[12px_10px] items-center">
-                                <div><SearchIcon color="red" className=" w-[16px] h-[16px] " /></div>
+                                <div><SearchIcon color="red" className=" w-[18px] h-[18px] " /></div>
                                 <input type="text" placeholder="Search" className="font-inter font-normal text-[12px] leading-[16px] tracking-[0%]   outline-none" />
                             </div>
                         </div>
 
                     </div>
                 </div>
-                <div className="border border-[#E4E4E4] rounded-[12px] h-[410px] overflow-hidden">
-                    <table className="w-full h-full border-collapse border border-[#E4E4E4] text-[13px] text-[#212121]">
-                        <thead className="h-[36px] bg-[#F6F6F6] font-inter font-normal leading-[150%] tracking-[-0.5%]">
+                <div className="border border-[#E4E4E4] rounded-[12px]  overflow-hidden">
+                    <table className="w-full h-full border-collapse border border-[#E4E4E4] text-[12px] text-[#212121]">
+                        <thead className="h-[36px] bg-[#F6F6F6] font-inter text-[12px] font-normal text-[#212121] leading-[150%] tracking-[-0.5%]">
                             <tr>
-                                <th className="p-[10px] text-left border-y border-[#E4E4E4]">
+                                <th className="p-[12px] gap-[8px] text-left border-y border-[#E4E4E4]">
                                     <div className="flex items-center gap-[6px]">
                                         <label>Question</label>
                                         <ExpandIcon size={16} className="text-[#84838A]" />
                                     </div>
                                 </th>
                                 {[...Array(6)].map((_, i) => (
-                                    <th key={i} className="p-[10px] text-center border-y border-[#E4E4E4]">
-                                        <div className="flex justify-center items-center min-w-fit gap-[5px]">
+                                    <th key={i} className="p-[12px] gap-[8px] text-center border-y border-[#E4E4E4]">
+                                        <div className="flex justify-center items-center min-w-fit ">
                                             <label className="text-[12px]">Cycle {i + 1} - 2024</label>
                                             <ExpandIcon size={16} className="text-[#84838A]" />
                                         </div>
@@ -133,7 +133,7 @@ const ActionPlanTracker = () => {
                                             className={`hover:bg-gray-100 transition ${isLastRow ? "border-t border-b border-[#E4E4E4]" : "border-b border-[#E4E4E4]"
                                                 }`}
                                         >
-                                            <td className="p-[10px]">
+                                            <td className="p-[12px] gap-[8px]">
                                                 <div className="flex min-w-[600px] items-center gap-[6px]">
                                                     <ExpandIcon
                                                         color="red"
@@ -141,10 +141,10 @@ const ActionPlanTracker = () => {
                                                         size={16}
                                                     />
                                                     <div className="flex flex-col">
-                                                        <span className="font-medium text-[13px] leading-[16px] tracking-[-0.5px]">
+                                                        <span className="font-medium text-[14px] text-[#212121] leading-[16px] tracking-[-0.5px]">
                                                             {row.question}
                                                         </span>
-                                                        <span className="text-gray-500 text-[12px]">{row.code}</span>
+                                                        <span className="text-[#84838A] text-[12px]">{row.code}</span>
                                                     </div>
                                                 </div>
                                             </td>
@@ -157,8 +157,8 @@ const ActionPlanTracker = () => {
                                             ))}
                                         </tr>
                                         {row.subquestions.map((subQ, subIndex) => (
-                                            <tr key={`${index}-${subIndex}`} className="bg-gray-50">
-                                                <td className="p-[10px] pl-[30px] text-gray-700">{subQ.text}</td>
+                                            <tr key={`${index}-${subIndex}`} className="">
+                                                <td className="p-[12px] gap-[8px] pl-[30px] text-[14px] text-[#84838A]">{subQ.text}</td>
                                                 {subQ.statuses.map((status, i) => (
                                                     <td key={i} className="p-[10px] text-center">
                                                         <div className="flex justify-center">
