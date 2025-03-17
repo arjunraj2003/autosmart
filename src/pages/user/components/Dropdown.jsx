@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Down, Up } from "../../../icons";
+import Vector from "../../../assets/Vector.png";
 
 const Dropdown = ({ label, options, selected, setSelected }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -13,13 +14,15 @@ const Dropdown = ({ label, options, selected, setSelected }) => {
                 <span>{selected || label}</span>
                 {isOpen ? <Up
                     size={18}
-                    
+                    className="font-normal"
                     color="#E14026"
                 />
-                    : <Down 
-                    size={18}
-                    
-                    color="#E14026" />}
+                    : <img src={Vector} alt="" />
+                    // : <Down 
+                    // size={18}
+                    // className="font-normal"
+                    // color="#E14026" />
+                    }
             </button>
 
             {isOpen && (
