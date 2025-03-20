@@ -43,7 +43,7 @@ const ActionPlanTracker = () => {
     ];
 
     return (
-        <div className=" h-full flex flex-col p-[16px_24px] gap-4 border border-gray-300 rounded-lg bg-[#FCFCFC]">
+        <div className=" h-screen flex flex-col p-[16px_24px] gap-4 bg-[#FCFCFC]">
             <div className=" flex h-[68px] flex gap-[12px] border border-[#E4E4E4] rounded-[12px] p-[12px] bg-[#FFFFFF] shadow-[0px_10px_16px_0px_#0000000A]">
                 <div className="flex items-center justify-center gap-[10px] w-[44px] rounded-lg border border-gray-300 bg-[#FFCCC5]">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
