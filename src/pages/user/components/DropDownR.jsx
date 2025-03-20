@@ -13,8 +13,10 @@ const DropDownR = () => {
 
             </div>
             <div className="w-[44px] h-full flex items-center justify-end">
-                {/* <DownIcon size={24} color="#E14026" className="w-8 h-8" /> */}
-                <img src={Vector} alt="" />
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 7.5L10 12.5L5 7.5" stroke="#E14026" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+
             </div>
         </div>
     )
