@@ -44,63 +44,63 @@ const ActionPlanTracker = () => {
 
     return (
         <div className=" h-screen flex flex-col p-[16px_24px] gap-4 bg-[#FCFCFC]">
-            <div className=" flex h-[68px] flex gap-[12px] border border-[#E4E4E4] rounded-[12px] p-[12px] bg-[#FFFFFF] shadow-[0px_10px_16px_0px_#0000000A]">
+            <div className=" flex  flex gap-[12px] border border-[#E4E4E4] rounded-[12px] p-[12px] bg-[#FFFFFF] shadow-[0px_10px_16px_0px_#0000000A]">
                 <div className="flex items-center justify-center gap-[10px] w-[44px] rounded-lg border border-gray-300 bg-[#FFCCC5]">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M16.19 2H7.81C4.17 2 2 4.17 2 7.81V16.18C2 19.83 4.17 22 7.81 22H16.18C19.82 22 21.99 19.83 21.99 16.19V7.81C22 4.17 19.83 2 16.19 2ZM14.79 16.6C14.64 16.79 14.42 16.89 14.2 16.89C14.04 16.89 13.88 16.84 13.74 16.73C12.68 15.91 11.31 15.91 10.25 16.73C9.92 16.98 9.45 16.92 9.2 16.6C8.95 16.27 9.01 15.8 9.33 15.55C10.92 14.32 13.06 14.32 14.65 15.55C14.99 15.8 15.05 16.27 14.79 16.6ZM17 13.51C16.85 13.7 16.63 13.8 16.41 13.8C16.25 13.8 16.09 13.75 15.95 13.64C13.55 11.79 10.46 11.79 8.06 13.64C7.73 13.9 7.26 13.84 7 13.51C6.74 13.18 6.81 12.71 7.13 12.46C10.08 10.18 13.9 10.18 16.85 12.46C17.19 12.71 17.25 13.18 17 13.51ZM18.59 10.42C18.44 10.61 18.22 10.71 18 10.71C17.84 10.71 17.68 10.66 17.54 10.55C14.17 7.95 9.82 7.95 6.46 10.55C6.13 10.8 5.66 10.74 5.41 10.42C5.16 10.09 5.22 9.62 5.54 9.37C9.46 6.34 14.53 6.34 18.46 9.37C18.79 9.62 18.85 10.09 18.59 10.42Z" fill="#E14026" />
                     </svg>
 
                 </div>
-                <div className="h-[44px] justify-center  flex flex-col gap-[4px]">
-                    <p className="h-[24px] justify-center font-inter font-medium text-[18px] leading-[24px] text-[#212121] tracking-[-0.005em]">
+                <div className=" justify-center  flex flex-col gap-[4px]">
+                    <p className=" justify-center font-inter font-medium text-[18px] leading-[24px] text-[#212121] tracking-[-0.005em]">
                         Action Plan Tracker
                     </p>
-                    <p className="h-[16px] font-inter font-normal text-[12px] leading-[16px] tracking-[0em]  flex text-[#84838A] items-center">
+                    <p className=" font-inter font-normal text-[12px] leading-[16px] tracking-[0em]  flex text-[#84838A] items-center">
                         Lorem Ipsum
                     </p>
 
                 </div>
             </div>
             <div className=" flex flex-col gap-[32px] border border-[#E4E4E4] bg-[#FFFFFF] rounded-[12px] p-[16px] shadow-[0px_10px_16px_0px_#0000000A]">
-                <div className=" h-[104px] flex flex-col gap-[12px]">
-                    <div className="flex h-[52px] justify-between">
+                <div className=" flex flex-col gap-[12px]">
+                    <div className="flex justify-between">
                         <div className="w-[596px] ">
-                            <div className="flex h-[52px] gap-3">
+                            <div className="flex gap-3">
                                 <DropDownMain />
                                 <DropDownR />
                             </div>
                         </div>
                         <div className="flex-1 "></div>
                     </div>
-                    <div className="flex h-[40px] justify-between ">
+                    <div className="flex justify-between ">
                         <div className="w-[596px]   flex gap-3">
                             <Dropdown
                                 label={selectedProgram}
                                 options={["Program A", "program B"]}
                                 setSelected={setSelectedProgram}
-                                className="w-[140px] h-[40px] text-[12px] flex justify-between items-center bg-[#FFFFFF] border border-[#F1F1F1] rounded-[8px] p-[8px_8px_8px_10px]"
+                                className="w-[140px]  text-[12px] flex justify-between items-center bg-[#FFFFFF] border border-[#F1F1F1] rounded-[8px] p-[8px_8px_8px_10px]"
                             />
                             <Dropdown
                                 label={selectedLocation}
                                 options={["Location 1", "Location 2"]}
                                 setSelected={setSelectedLocation}
-                                className="w-[140px] h-[40px] text-[12px] flex justify-between items-center bg-[#FFFFFF] border border-[#F1F1F1] rounded-[8px] p-[8px_8px_8px_10px]"
+                                className="w-[140px] text-[12px] flex justify-between items-center bg-[#FFFFFF] border border-[#F1F1F1] rounded-[8px] p-[8px_8px_8px_10px]"
                             />
                             <Dropdown
                                 label={selectedDepartment}
                                 options={["Category 1", "Category 2"]}
                                 setSelected={setSelectedDepartment}
-                                className="w-[140px] h-[40px] text-[12px] flex justify-between items-center bg-[#FFFFFF] border border-[#F1F1F1] rounded-[8px] p-[8px_8px_8px_10px]"
+                                className="w-[140px] text-[12px] flex justify-between items-center bg-[#FFFFFF] border border-[#F1F1F1] rounded-[8px] p-[8px_8px_8px_10px]"
                             />
                             <Dropdown
                                 label={selectedSection}
                                 options={["Section X", "Section Y"]}
                                 setSelected={setSelectedSection}
-                                className="w-[140px] h-[40px] text-[12px] flex justify-between items-center bg-[#FFFFFF] border border-[#F1F1F1] rounded-[8px] p-[8px_8px_8px_10px]"
+                                className="w-[140px] text-[12px] flex justify-between items-center bg-[#FFFFFF] border border-[#F1F1F1] rounded-[8px] p-[8px_8px_8px_10px]"
                             />
                         </div>
                         <div className="flex-1  flex justify-end">
-                            <div className="w-[140px] h-[40px] flex gap-[8px] border border-[#F1F1F1] rounded-[8px] p-[12px_10px] items-center">
+                            <div className="w-[140px]  flex gap-[8px] border border-[#F1F1F1] rounded-[8px] p-[12px_10px] items-center">
                                 <div><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M7.66671 14C11.1645 14 14 11.1645 14 7.66668C14 4.16887 11.1645 1.33334 7.66671 1.33334C4.1689 1.33334 1.33337 4.16887 1.33337 7.66668C1.33337 11.1645 4.1689 14 7.66671 14Z" stroke="#E14026" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                     <path d="M14.6667 14.6667L13.3334 13.3333" stroke="#E14026" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -209,7 +209,7 @@ const ActionPlanTracker = () => {
 
 
 
-                <div className="flex h-[40px] rounded-lg justify-between">
+                <div className="flex rounded-lg justify-between">
                     <div className="flex flex-1 gap-[8px]">
                         <button className="w-[32px] h-[32px]c border border-[#F1F1F1]  p-[5px]  rounded-lg"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M11.7267 12L12.6667 11.06L9.61333 8L12.6667 4.94L11.7267 4L7.72667 8L11.7267 12Z" fill="#212121" />

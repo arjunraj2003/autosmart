@@ -3,7 +3,7 @@ import { DownIcon } from '../../../icons'
 import Vector from "../../../assets/Vector.png";
 const DropDownR = () => {
     return (
-        <div className="w-[292px] h-[52px] flex gap-[8px] rounded-[8px] border border-[#E4E4E4] p-[8px] bg-[#FFFFFF] font-inter font-normal leading-[12px] tracking-[-0.5px] align-bottom">
+        <div className="w-[292px]  flex gap-[8px] rounded-[8px] border border-[#E4E4E4] p-[8px] bg-[#FFFFFF] font-inter font-normal leading-[12px] tracking-[-0.5px] align-bottom">
             <div className="w-[248px] h-full  gap-[4px] rounded-[4px] flex flex-col  ">
                 <div className="w-[132px] h-[16px] text-[12px] font-inter text-[#212121] leading-[18px] font-medium">2024 Jan - 2024 Dec</div>
                 <div className="w-[150px] h-[16px] flex gap-[8px]">
