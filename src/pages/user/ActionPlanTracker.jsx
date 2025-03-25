@@ -148,7 +148,7 @@ const ActionPlanTracker = () => {
                                                 }`}
                                         >
                                             <td className="">
-                                                <div className="flex min-w-[600px] p-[12px] gap-[8px]">
+                                                <div className="flex p-[12px] gap-[8px]">
                                                     <div>
                                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path opacity="0.1" d="M2 7.81L2 16.19C2 19.83 4.17 22 7.81 22L16.18 22C19.83 22 22 19.83 22 16.19L22 7.82C22 4.18 19.83 2.01 16.19 2.01L7.81 2.01C4.17 2 2 4.17 2 7.81Z" fill="#E14026" />
